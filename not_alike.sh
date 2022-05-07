@@ -123,6 +123,9 @@ parallel -j 1 \
 		-query {1} \
 		-seqidlist {1//}/sid.txt \
 		-task $task \
+		-max_target_seqs 5 \
+		-perc_identity $ident \
+		-qcov_hsp_perc $qcov \
 		-out {1.}.blast \
 		-outfmt 6 \
 		-evalue $evalue \
